@@ -1,39 +1,113 @@
-body {
-    font-family: 'Karla', sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-nav {
-    background-color: beige;
-    padding: 5px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    position: fixed;
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background: rgb(206,237,246);
+    background: linear-gradient(0deg, rgba(206,237,246,0.6446953781512605) 1%, rgba(242,233,213,0.7399334733893557) 100%);
+}
+
+header {
     width: 100%;
+    background-color: #edecc2;
+    border: 1px solid #edecc2;
 }
 
-nav > h3 {
-    margin: 0;
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem 0;
 }
 
 #blog-list {
-    padding: 10px;
+    padding: 1.375rem;
+    background-color: beige;
 }
 
 form {
-    padding: 60px 10px 10px;
+    padding: 1rem;
     display: grid;
     background-color: lightblue;
 }
 
+label{
+    font-size: 1rem;
+}
+
+textarea#post-body {
+    height: 150px;
+}
+
 input#post-title, textarea#post-body {
     margin-bottom: 10px;
+    padding: 0.5rem;
 }
 
 button {
     padding: 10px;
     font-size: 18px;
     cursor: pointer;
+    font-weight: 700;
+}
+
+.post-heading {
+    margin:0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.post-body{
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+@media (min-width: 600px) {
+    .container{
+        width: 70vw;
+        margin: 0 auto;
+    }
+
+    h1{
+        font-size: 3.5rem;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+
+    label{
+        font-size: 1.5rem;
+    }
+    
+    textarea#post-body {
+        height: 200px;
+    }
+    
+    input#post-title, textarea#post-body {
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+    }
+
+    button {
+        padding: 0.5rem 1.25rem;
+        font-size: 1.5rem;
+        width: 200px;
+        justify-self: end;
+    }
+
+    .post-heading {
+        margin: 1rem 0;
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+    
+    .post-body{
+        margin: 2rem 0;
+        font-size: 1.3rem;
+    }
 }

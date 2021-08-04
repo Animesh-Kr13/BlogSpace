@@ -7,8 +7,8 @@ function renderPosts() {
     let html = ""
     for (let post of postsArray) {
         html += `
-            <h3>${post.title}</h3>
-            <p>${post.body}</p>
+            <h3 class="post-heading">${post.title}</h3>
+            <p class="post-body">${post.body}</p>
             <hr />
         `
     }
@@ -46,6 +46,6 @@ form.addEventListener("submit", function(e) {
             renderPosts()
             titleInput.value = ""
             bodyInput.value = ""
-            // form.reset()
+            form.reset()
         })
 })
